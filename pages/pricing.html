@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/sign-up.css">
+    <link rel="stylesheet" href="../css/pricing.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    @font-face{
+        font-family: 'Plaak';
+        src: url("../assets/fonts/Plaak Extracondensed 42 Bold.otf")
+    }
+
+    .stats .percent-blocks .percent-block .percent-number span{
+        font-family: 'Plaak';
+    }
+    </style>
+    <title>WeWantYou</title>
+</head>
+<body>
+    <div class="contact-us-modal" id="contact-modal-wrapper" style="display: none;">
+        <div class="modal-container" id="thanks-modal" style="display: none;">
+            <div class="modal-close" id="CloseThanks">
+                <img src="../assets/icons/small-window-close.svg" alt="">
+            </div>
+            <div class="thanks-icon">
+                <img src="../assets/icons/thanks-icon.svg" alt="Thanks">
+            </div>
+            <div class="thanks-title">
+                <span>Thanks for writing in!</span>
+            </div>
+            <div class="thanks-description">
+                <span>We will try to get back to you within 24 hours, if not sooner.</span>
+            </div>
+        </div>
+        <div class="modal-container" id="contact-modal" style="display: none;">
+            <div class="modal-close">
+                <img src="../assets/icons/small-window-close.svg" alt="" id="CloseContact">
+            </div>
+            <div class="contact-title">
+                <span>Contact Us</span>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <div class="first-flex-wrapper">
+                        <div class="form-group">
+                            <label for="contact-f-name">First Name*</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-l-name">Last Name*</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="second-flex-wrapper">
+                        <div class="form-group">
+                            <label for="contact-c-name">Company Name*</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-reason">Reason*</label>
+                            <select name="reason" id="contact-reason" placeholder="Please Select">
+                                <option value="1">show</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message*</label>
+                        <textarea name="message" id="contact-message" cols="30" rows="10" style="width: 100%;"></textarea>
+                    </div>
+                    <button type="button" id="OpenThanks">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div> 
+    <div class="header" id="swap-anchor">
+        <div class="container-fluid">
+            <div class="header-navigation">
+                <div class="header-logo">
+                    <div class="header-logo-img">
+                        <img src="../assets/icons/header-logo.svg" alt="">
+                    </div>
+                    <div class="header-logo-name">
+                        <span>wewant</span>you
+                    </div>
+                </div>
+                <div class="header-pages">
+                    <div class="pages">
+                        <a href="">Features</a>
+                        <a href="">Pricing</a>
+                        <a href="">Blog</a>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+                <div class="header-autorization">
+                    <div class="autorization">
+                        <a href="">Log In</a>
+                        <button id="sign-up">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-header">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <div class="header-logo-img">
+                            <img src="../assets/icons/header-logo.svg" alt="">
+                        </div>
+                        <div class="header-logo-name">
+                            <span>wewant</span>you
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="">Features</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="">Log In</a>
+                        </li>
+                        <li>
+                            <button id="sign-up-mobile">Sign Up</button>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="pricing">
+            <div class="container-fluid">
+                <div class="pricing-wrapper">
+                    <div class="pricing-title">
+                        <h2>
+                            Find the best
+                        </h2>
+                        <span>
+                            plan for you
+                        </span>
+                    </div>
+                    <div class="contact-us-card">
+                        <div class="card-description">
+                            <div class="card-icon">
+                                <img src="../assets/icons/icon.svg" alt="">
+                            </div>
+                            <div class="card-text">
+                                <span>
+                                    If you have any questions about our pricing plans or you’re not sure what plan is best for you, please contact us so we can make sure you’re choosing wisely.
+                                   </span> 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-button">
+                            <button type="button" id="OpenContact">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="basic-plan">
+                        <div class="basic-plan-title">
+                            <div class="title-text">
+                                <span>Basic Plan</span>
+                            </div>
+                            <div class="title-lable">
+                                <span>FREE</span>
+                                
+                            </div>
+                        </div>
+                        <div class="basic-plan-description">
+                            <span>This plan allow us to try out the</span>
+                            <span>wewant</span>
+                            <span>you</span>
+                            <span>for free</span>
+                            <span>, during 15 days and send 1 offer letter.</span>
+                        </div>
+                        <div class="basic-plan-button">
+                            <button type="button">Free Trial</button>
+                        </div>
+                    </div>
+                    <div class="billing-interval">
+                        <div class="billing-interval-wrapper">
+                            <label for="billing">Billing Interval</label>
+                            <select name="interval" id="billing">
+                                <option value="monthly">Monthly</option>
+                                <option value="annually">Annually</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="plan-cards">
+                        <div class="plan-cards-wrapper">
+                            <div class="plan-card">
+                                <div class="card-title">
+                                    <h3>Starter</h3>
+                                </div>
+                                <div class="card-cost">
+                                    <div class="manthly-cost">
+                                        <div class="cost-symbol">
+                                            $
+                                        </div>
+                                        <div class="cost-value">
+                                                39
+                                        </div>
+                                        <div class="cost-name">
+                                                billed monthly
+                                        </div>
+                                    </div>
+                                    <div class="or">
+                                        or just
+                                    </div>
+                                    <div class="annually-cost">
+                                        <div class="cost-symbol">
+                                            $
+                                        </div>
+                                        <div class="cost-value">
+                                            35
+                                        </div>
+                                        <div class="mo">
+                                            /mo
+                                        </div>
+                                        <div class="cost-name">
+                                            billed annually
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-features">
+                                    <div class="features-title">
+                                        <span>
+                                            Features
+                                        </span>
+                                    </div>
+                                    <ul>
+                                        5 Offer Letters Per Month
+                                        <li>2 team members</li>
+                                        <li>Tracking</li>
+                                        <li>Access to all basic templates</li>
+                                        <li>CVS upload for candidate information</li>
+                                        <li>Email, chat and phone support</li>
+                                    </ul>
+                                </div>
+                                <div class="choose-card">
+                                    <button type="button">Choose Plan</button>
+                                </div>
+                            </div>
+                            <div class="plan-card">
+                                <div class="card-title">
+                                    <h3>Growing Business</h3>
+                                </div>
+                                <div class="card-cost">
+                                    <div class="manthly-cost">
+                                        <div class="cost-symbol">
+                                            $
+                                        </div>
+                                        <div class="cost-value">
+                                            75
+                                        </div>
+                                        <div class="cost-name">
+                                            billed monthly
+                                        </div>
+                                    </div>
+                                    <div class="or">
+                                            or just
+                                        </div>
+                                    <div class="annually-cost">
+                                        <div class="cost-symbol">
+                                            $
+                                        </div>
+                                        <div class="cost-value">
+                                            50
+                                        </div>
+                                        <div class="mo">
+                                            /mo
+                                        </div>
+                                        <div class="cost-name">
+                                            billed annually
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-features">
+                                    <div class="features-title">
+                                        <span>
+                                            Features
+                                        </span>
+                                    </div>
+                                    <ul>
+                                        Everything in Starter +50 Offer Letters per month
+                                        <li>Tracking and enhanced security</li>
+                                        <li>Access to premium temlates</li>
+                                        <li>Candidate experience survey</li>
+                                        <li>Removes branding</li>
+                                        <li>Weekly reporting</li>
+                                        <li>API connection for popular HR software</li>
+                                        <li>Single ssign (SSO) integration</li>
+                                    </ul>
+                                </div>
+                                <div class="choose-card">
+                                    <button type="button">Choose Plan</button>
+                                </div>
+                            </div>
+                            <div class="plan-card">
+                                <div class="card-title">
+                                    <h3>Organization</h3>
+                                </div>
+                                <div class="card-cost">
+                                    <div class="manthly-cost">
+                                        <div class="cost-symbol">
+                                            $
+                                        </div>
+                                        <div class="cost-value">
+                                            250
+                                        </div>
+                                        <div class="cost-name">
+                                            billed monthly
+                                        </div>
+                                    </div>
+                                    <div class="or">
+                                            or just
+                                        </div>
+                                    <div class="annually-cost">
+                                        <div class="cost-symbol">
+                                            $
+                                        </div>
+                                        <div class="cost-value">
+                                            150
+                                        </div>
+                                        <div class="mo">
+                                            /mo
+                                        </div>
+                                        <div class="cost-name">
+                                            billed annually
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-features">
+                                    <div class="features-title">
+                                        <span>
+                                            Features
+                                        </span>
+                                    </div>
+                                    <ul>
+                                        Everuthing in Growing Business + Unlimited Offer Letters per month
+                                        <li>Tracking and enhanced security</li>
+                                        <li>Access to all temates and custom template engine</li>
+                                        <li>Design a personalize welcome experience</li>
+                                        <li>Removes branding</li>
+                                        <li>Weekly reporting</li>
+                                        <li>API connetion for popular HR software</li>
+                                        <li>Single sign on (SSO) integration</li>
+                                        <li>Email, chat and phone support</li>
+                                    </ul>
+                                </div>
+                                <div class="choose-card">
+                                    <button type="button">Choose Plan</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="plans-table">
+                        <div class="plans-table-wrapper">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Starter</th>
+                                        <th>Growing Business</th>
+                                        <th>Organization</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Monthly Fee</td>
+                                        <td>$39</td>
+                                        <td>$79</td>
+                                        <td>$159</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Annually Fee</td>
+                                        <td>$429</td>
+                                        <td>$869</td>
+                                        <td>$1,749</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Offer Letters per month</td>
+                                        <td>5</td>
+                                        <td>50</td>
+                                        <td>750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tracking</td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tracking and enhanced security</td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Access to starter templates</td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Access to premium templates</td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Access to custom template engine</td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Candidate experience surve</td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Design a personalized welcome experience</td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Removes branding</td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weekly reporting</td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>API connection to popular HR software</td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Single sign on (SSO) integration</td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email, chat and phone support</td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_no"></div>
+                                        </td>
+                                        <td>
+                                            <div class="circle_yes"></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="check">
+                        <div class="check-text">
+                            <span>Not convinced just yet?</span>
+                        </div>
+                        <div class="check-title">
+                            <h3>Check Our Features</h3>
+                        </div>
+                        <div class="see-all-features">
+                            <a href="#">See All Features</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../assets/icons/footer-logo.svg" alt="">
+            </div>
+            <div class="footer-pages">
+                <div class="product-pages">
+                    <ul>Product
+                        <li>
+                            <a href="">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="">Features</a>
+                        </li>
+                        <li>
+                            <a href="">Templates</a>
+                        </li>
+                        <li>
+                            <a href="">Integrations</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="company-pages">
+                    <ul>Company
+                        <li>
+                            <a href="">About</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="resources-pages">
+                    <ul>Resources
+                        <li>
+                            <a href="">Blog</a>
+                        </li>
+                        <li>
+                            <a href="">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/Twitter.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/Instagram.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/YouTube.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="swap-up">
+                    <a href="#swap-anchor">
+                        <img src="../assets/icons/arrow.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="copyright-company">
+                <span>Copyright &copy; 2018 - WeWantYou, LLC. All rights reserved.</span>
+            </div>
+            <div class="copyright-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <script>  
+        var OpenContact = document.getElementById("OpenContact");
+        var CloseContact = document.getElementById("CloseContact");
+        var OpenThanks = document.getElementById("OpenThanks");
+        var CloseThanks = document.getElementById("CloseThanks");
+
+        OpenContact.onclick = function (){
+            document.getElementById("contact-modal-wrapper").style.display = "flex";
+            document.getElementById("contact-modal").style.display = "block";
+            document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+            document.getElementById("contact-modal-wrapper").style.overflowY = "scroll";
+        }
+
+        OpenThanks.onclick = function (){
+            document.getElementById("contact-modal").style.display = "none";
+            document.getElementById("thanks-modal").style.display = "block";
+        }
+        
+        CloseContact.onclick = function (){
+            document.getElementById("contact-modal-wrapper").style.display = "none";
+            document.getElementById("contact-modal").style.display = "none";
+            document.getElementById("thanks-modal").style.display = "none";
+            document.getElementsByTagName("body")[0].style.overflowY = "scroll"
+        }
+
+        CloseThanks.onclick = function (){
+            document.getElementById("contact-modal-wrapper").style.display = "none";
+            document.getElementById("contact-modal").style.display = "none";
+            document.getElementById("thanks-modal").style.display = "none";
+            document.getElementsByTagName("body")[0].style.overflowY = "scroll"
+        }
+
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

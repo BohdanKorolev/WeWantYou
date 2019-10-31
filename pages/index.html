@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/sign-up.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    @font-face{
+        font-family: 'Plaak';
+        src: url("../assets/fonts/Plaak Extracondensed 42 Bold.otf")
+    }
+
+    .stats .percent-blocks .percent-block .percent-number span{
+        font-family: 'Plaak';
+    }
+    </style>
+    <title>WeWantYou</title>
+</head>
+<body>
+    <div class="sign-up-modal-container" id="SignUpModal">
+
+        <div class="paypal-payment-modal" id="paypalModal" style="display: none;">
+            <div class="paypal-modal-container">
+                <div class="payment-close">
+                    <a href="#" id="paypalClose">
+                        <img src="../assets/icons/small-window-close.svg" alt="">
+                    </a>
+                </div>
+                <div class="payment-logo">
+                    <img src="../assets/icons/small.svg" alt="PayPal">
+                </div>
+                <div class="payment-plan">
+                    <div class="plan-wrapper">
+                        <div class="plan-type">
+                            <span>Organization</span>
+                        </div>
+                        <div class="annually-cost">
+                            <div class="cost-symbol">
+                                $
+                            </div>
+                            <div class="cost-value">
+                                1,749
+                            </div>
+                            <div class="cost-name">
+                                billed annually
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-form">
+                    <form action="">
+                        <input type="text">
+                        <input type="password">
+                        <button type="submit">Log In</button>
+                    </form>
+                    <a href="#">Forgot your email or password?</a>
+                    <div class="or">
+                        or
+                    </div>
+                    <button type="button">Create an account</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="stripe-payment-modal" id="stripeModal" style="display: none;">
+            <div class="stripe-modal-container">
+                <div class="payment-close">
+                    <a href="#" id="stripeClose">
+                        <img src="../assets/icons/small-window-close.svg" alt="">
+                    </a>
+                </div>
+                <div class="payment-logo">
+                    <img src="../assets/icons/stripe-modal.svg" alt="PayPal">
+                </div>
+                <div class="payment-plan">
+                    <div class="plan-wrapper">
+                        <div class="plan-type">
+                            <span>Organization</span>
+                        </div>
+                        <div class="annually-cost">
+                            <div class="cost-symbol">
+                                $
+                            </div>
+                            <div class="cost-value">
+                                150
+                            </div>
+                            <div class="mo">
+                                /mo
+                            </div>
+                            <div class="cost-name">
+                                billed annually
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-form">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="StripeEmail">Email*</label>
+                            <input type="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="StripeCard">Card Number*</label>
+                            <input type="StripeCard">
+                        </div>
+                        <div class="card-info">
+                            <div class="form-group">
+                                <label for="Month/Year">Month/Year*</label>
+                                <input type="Month/Year">
+                            </div>
+                            <div class="form-group">
+                                <label for="CVC">CVC*</label>
+                                <input type="CVC">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Promo">Do you have a promo code?</label>
+                            <input type="Promo">
+                        </div>
+                        <button type="submit">Pay $1,749</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="wwy-logo">
+            <div class="container">
+                <div class="sign-up-close">
+                    <a href="#" id="signupClose">
+                        <img src="../assets/icons/close.svg" alt="">
+                    </a>
+                </div>
+                <div class="wwy-img">
+                    <img src="../assets/icons/sign-up-logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="sign-up-steper">
+            <div class="steper-container">
+                <ul>
+                    <li class="done-step">Sign Up</li>
+                    <li class="done-step">Choose Plan</li>
+                    <li class="done-step">Paymant</li>
+                    <li class="done-step">Company Info</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="sign-up" style="display: none;">
+            <div class="container">
+                <div class="sign-up-container">
+                    <div class="sign-up-title">
+                        <h1>
+                            Sign Up
+                        </h1>
+                    </div>
+                    <div class="sign-up-form">
+                        <form action="">
+                            <div class="first-flex-wrap">
+                                <div class="form-company">
+                                    <div class="form-group">
+                                        <label for="comp-name">Company-name*</label>
+                                        <input type="text" id="comp-name">
+                                    </div>
+                                </div>
+                                <div class="form-email">
+                                    <div class="form-group">
+                                        <label for="name">Your Name*</label>
+                                        <input type="text" id="name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second-flex-wrap">
+                                <div class="form-create-pass">
+                                    <div class="form-group">
+                                        <label for="email">Email*</label>
+                                        <input type="email" id="email">
+                                    </div>
+                                </div>
+                                <div class="form-confirm-pass">
+                                    <div class="form-group">
+                                        <label for="phone-number">Phone Number*</label>
+                                        <input type="text" id="phone-number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last-flex-wrap">
+                                <div class="form-create-pass">
+                                    <div class="form-group">
+                                        <label for="create-pass">Create Pssword*</label>
+                                        <input type="password" id="create-pass">
+                                    </div>
+                                </div>
+                                <div class="form-confirm-pass">
+                                    <div class="form-group">
+                                        <label for="confirm-pass">Confirm Password*</label>
+                                        <input type="password" id="confirm-pass">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-checkbox">
+                                <div class="form-group">
+                                    <input type="checkbox" id="custom-checkbox" unchecked>
+                                    <label for="custom-checkbox">
+                                        I have read and agree to WeWantYou <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>.
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="sign-up-button">
+                            <button type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="choose-plan" style="display: none;">
+            <div class="choose-plan-container">
+                <div class="choose-plan-title">
+                    <h1>Choose Plan</h1>
+                </div>
+                <div class="choose-interval">
+                    <div class="choose-interval-wrapper">
+                        <label for="">Billing Interval</label>
+                        <select name="interval" id="interval">
+                            <option value="annually">Annually</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="choose-plan-cards">
+                    <div class="plan-cards-wrapper">
+                        <div class="plan-card">
+                            <div class="card-title">
+                                <h3>Starter</h3>
+                            </div>
+                            <div class="card-cost">
+                                <div class="manthly-cost">
+                                    <div class="cost-symbol">
+                                        $
+                                    </div>
+                                    <div class="cost-value">
+                                            39
+                                    </div>
+                                    <div class="cost-name">
+                                            billed monthly
+                                    </div>
+                                </div>
+                                <div class="or">
+                                    or just
+                                </div>
+                                <div class="annually-cost">
+                                    <div class="cost-symbol">
+                                        $
+                                    </div>
+                                    <div class="cost-value">
+                                        35
+                                    </div>
+                                    <div class="mo">
+                                        /mo
+                                    </div>
+                                    <div class="cost-name">
+                                        billed annually
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose-card">
+                                <button type="button">Choose Plan</button>
+                            </div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="card-title">
+                                <h3>Growing Business</h3>
+                            </div>
+                            <div class="card-cost">
+                                <div class="manthly-cost">
+                                    <div class="cost-symbol">
+                                        $
+                                    </div>
+                                    <div class="cost-value">
+                                        75
+                                    </div>
+                                    <div class="cost-name">
+                                        billed monthly
+                                    </div>
+                                </div>
+                                <div class="or">
+                                        or just
+                                    </div>
+                                <div class="annually-cost">
+                                    <div class="cost-symbol">
+                                        $
+                                    </div>
+                                    <div class="cost-value">
+                                        50
+                                    </div>
+                                    <div class="mo">
+                                        /mo
+                                    </div>
+                                    <div class="cost-name">
+                                        billed annually
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose-card">
+                                <button type="button">Choose Plan</button>
+                            </div>
+                        </div>
+                        <div class="plan-card">
+                            <div class="card-title">
+                                <h3>Organization</h3>
+                            </div>
+                            <div class="card-cost">
+                                <div class="manthly-cost">
+                                    <div class="cost-symbol">
+                                        $
+                                    </div>
+                                    <div class="cost-value">
+                                        250
+                                    </div>
+                                    <div class="cost-name">
+                                        billed monthly
+                                    </div>
+                                </div>
+                                <div class="or">
+                                        or just
+                                    </div>
+                                <div class="annually-cost">
+                                    <div class="cost-symbol">
+                                        $
+                                    </div>
+                                    <div class="cost-value">
+                                        150
+                                    </div>
+                                    <div class="mo">
+                                        /mo
+                                    </div>
+                                    <div class="cost-name">
+                                        billed annually
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose-card">
+                                <button type="button">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="payment">
+            <div class="payment-container">
+                <div class="payment-title">
+                    <h1>Payment</h1>
+                </div>
+                <div class="payment-method">
+                    <div class="method-title">
+                        <span>Choose a Payment Method</span>
+                    </div>
+                    <div class="methods">
+                        <div class="paypal-method">
+                            <span>Connect PayPal</span>
+                            <div class="paypal" id="OpenPaypal">
+                                <img src="../assets/icons/PayPal.svg" alt="PayPal">
+                            </div>
+                        </div>
+                        <div class="stripe-method">
+                            <span>Connect Stripe</span>
+                            <div class="stripe" id="OpenStripe">
+                                <img src="../assets/icons/stripe.svg" alt="Stripe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="company-info" style="display: none;">
+            <div class="container">
+                <div class="company-info-container">
+                    <div class="info-title">
+                        <h1>
+                            Company Info
+                        </h1>
+                    </div>
+                    <div class="info-form">
+                        <form action="">
+                            <div class="first-flex-wrap">
+                                <div class="form-company">
+                                    <div class="form-group">
+                                        <label for="comp-name">Company-name*</label>
+                                        <input type="text" id="comp-name">
+                                    </div>
+                                </div>
+                                <div class="form-email">
+                                    <div class="form-group">
+                                        <label for="address1">Address*</label>
+                                        <input type="text" id="address1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second-flex-wrap">
+                                <div class="form-create-pass">
+                                    <div class="form-group">
+                                        <label for="address2">Address 2*</label>
+                                        <input type="text" id="address2">
+                                    </div>
+                                </div>
+                                <div class="form-confirm-pass">
+                                    <div class="form-group">
+                                        <label for="">Company Size*</label>
+                                        <select>
+                                            <option value="1">1-10</option>
+                                            <option value="1">11-100</option>
+                                            <option value="1">101-500</option>
+                                            <option value="1">Over 500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last-flex-wrap">
+                                <div class="form-create-pass">
+                                    <div class="form-group">
+                                        <label for="">Company Type*</label>
+                                        <select>
+                                            <option value="Accommodation">Accommodation</option>
+                                            <option value="Hospitality">Hospitality</option>
+                                            <option value="Accounting">Accounting</option>
+                                            <option value="Administrative-Services">Administrative Services</option>
+                                            <option value="Advertising">Advertising</option>
+                                            <option value="Agriculture">Agriculture</option>
+                                            <option value="Architecture">Architecture</option>
+                                            <option value="Arts">Arts</option>
+                                            <option value="Automotive">Automotive</option>
+                                            <option value="Construction">Construction</option>
+                                            <option value="Consulting">Consulting</option>
+                                            <option value="Design">Design</option>
+                                            <option value="Education">Education</option>
+                                            <option value="Engineering">Engineering</option>
+                                            <option value="Film">Film</option>
+                                            <option value="Finance">Finance</option>
+                                            <option value="Fishing">Fishing</option>
+                                            <option value="Hunting">Hunting</option>
+                                            <option value="Food-Services">Food Services</option>
+                                            <option value="Forestry">Forestry</option>
+                                            <option value="Government">Government</option>
+                                            <option value="Health-Care">Health Care</option>
+                                            <option value="Individual">Individual</option>
+                                            <option value="Information">Information</option>
+                                            <option value="Technology">Technology</option>
+                                            <option value="Insurance">Insurance</option>
+                                            <option value="Internet">Internet</option>
+                                            <option value="Legal">Legal</option>
+                                            <option value="Manufacturing">Manufacturing</option>
+                                            <option value="Marketing">Marketing</option>
+                                            <option value="Media">Media</option>
+                                            <option value="Entertainment">Entertainment</option>
+                                            <option value="Mining">Mining</option>
+                                            <option value="Non-Profit">Non-Profit</option>
+                                            <option value="Public-Relations">Public Relations</option>
+                                            <option value="Real-Estate">Real Estate</option>
+                                            <option value="Recreation">Recreation</option>
+                                            <option value="Retail">Retail</option>
+                                            <option value="Scientific-Services">Scientific Services</option>
+                                            <option value="Social-Assistance">Social Assistance</option>
+                                            <option value="Software">Software</option>
+                                            <option value="Support-Services">Support Services</option>
+                                            <option value="Technical-Services">Technical Services</option>
+                                            <option value="Telecommunications">Telecommunications</option>
+                                            <option value="Transportation">Transportation</option>
+                                            <option value="Travel-Tourism">Travel Tourism</option>
+                                            <option value="Utilities">Utilities</option>
+                                            <option value="Warehousing">Warehousing</option>
+                                            <option value="Waste-Management">Waste Management</option>
+                                            <option value="Services">Services</option>
+                                            <option value="Wholesale-Trade">Wholesale Trade</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-confirm-pass">
+                                    <div class="form-group">
+                                        <label for="">Timezone*</label>
+                                        <select>
+                                            <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
+                                            <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+                                            <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
+                                            <option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) Alaska</option>
+                                            <option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+                                            <option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+                                            <option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-7">(GMT-07:00) Arizona</option>
+                                            <option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                                            <option timeZoneId="9" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+                                            <option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Central America</option>
+                                            <option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Central Time (US & Canada)</option>
+                                            <option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+                                            <option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Saskatchewan</option>
+                                            <option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+                                            <option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
+                                            <option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Indiana (East)</option>
+                                            <option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+                                            <option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Caracas, La Paz</option>
+                                            <option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Manaus</option>
+                                            <option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Santiago</option>
+                                            <option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="-3.5">(GMT-03:30) Newfoundland</option>
+                                            <option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Brasilia</option>
+                                            <option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+                                            <option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Greenland</option>
+                                            <option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Montevideo</option>
+                                            <option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="-2">(GMT-02:00) Mid-Atlantic</option>
+                                            <option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="-1">(GMT-01:00) Cape Verde Is.</option>
+                                            <option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="-1">(GMT-01:00) Azores</option>
+                                            <option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+                                            <option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+                                            <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+                                            <option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                                            <option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+                                            <option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+                                            <option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) West Central Africa</option>
+                                            <option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Amman</option>
+                                            <option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+                                            <option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Beirut</option>
+                                            <option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Cairo</option>
+                                            <option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="2">(GMT+02:00) Harare, Pretoria</option>
+                                            <option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+                                            <option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Jerusalem</option>
+                                            <option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Minsk</option>
+                                            <option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Windhoek</option>
+                                            <option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+                                            <option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+                                            <option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Nairobi</option>
+                                            <option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Tbilisi</option>
+                                            <option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="3.5">(GMT+03:30) Tehran</option>
+                                            <option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
+                                            <option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Baku</option>
+                                            <option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Yerevan</option>
+                                            <option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="4.5">(GMT+04:30) Kabul</option>
+                                            <option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="5">(GMT+05:00) Yekaterinburg</option>
+                                            <option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+                                            <option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Sri Jayawardenapura</option>
+                                            <option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+                                            <option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="5.75">(GMT+05:45) Kathmandu</option>
+                                            <option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="6">(GMT+06:00) Almaty, Novosibirsk</option>
+                                            <option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="6">(GMT+06:00) Astana, Dhaka</option>
+                                            <option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="6.5">(GMT+06:30) Yangon (Rangoon)</option>
+                                            <option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+                                            <option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="7">(GMT+07:00) Krasnoyarsk</option>
+                                            <option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+                                            <option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Kuala Lumpur, Singapore</option>
+                                            <option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+                                            <option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Perth</option>
+                                            <option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Taipei</option>
+                                            <option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+                                            <option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Seoul</option>
+                                            <option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="9">(GMT+09:00) Yakutsk</option>
+                                            <option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Adelaide</option>
+                                            <option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Darwin</option>
+                                            <option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Brisbane</option>
+                                            <option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+                                            <option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Hobart</option>
+                                            <option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Guam, Port Moresby</option>
+                                            <option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Vladivostok</option>
+                                            <option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+                                            <option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="12">(GMT+12:00) Auckland, Wellington</option>
+                                            <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+                                            <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkbox-form-title">
+                                <span>Offer Letter Settings</span>
+                            </div>
+                            <div class="form-checkbox">
+                                <div class="hr-manager">
+                                    <span>Does your company require HR manager review?</span>
+                                    <div class="hr-answer">
+                                        <div class="hr-yes"> 
+                                            <input type="radio" id="hr-yes" name="hr-answer">
+                                            <label for="hr-yes">Yes</label>
+                                        </div>
+                                        <div class="hr-no">
+                                            <input type="radio" id="hr-no" name="hr-answer">
+                                            <label for="hr-no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="signature-manager">
+                                    <span>Does your company requires signatures?</span>
+                                    <div class="signature-answer">
+                                        <div class="signature-yes">
+                                            <input type="radio" id="signature-yes" name="signature-answer">
+                                            <label for="signature-yes">Yes</label>
+                                        </div>
+                                        <div class="signature-no">
+                                            <input type="radio" id="signature-no" name="signature-answer">
+                                            <label for="signature-no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="sign-up-button">
+                            <button type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="sign-up-modal-container" id="LoginModal">
+
+        <div class="wwy-logo">
+            <div class="container">
+                <div class="sign-up-close">
+                    <a href="#"  id="loginClose">
+                        <img src="../assets/icons/close.svg" alt="">
+                    </a>
+                </div>
+                <div class="wwy-img">
+                    <img src="../assets/icons/sign-up-logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="login">
+            <div class="login-container">
+                <div class="login-title">
+                    <h1>Login</h1>
+                </div>
+                <form action="">
+                    <div class="form-group">
+                        <label for="email-login">Email*</label>
+                        <input type="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass-login">Password*</label>
+                        <input type="password">
+                    </div>
+                    <button>Login</button>
+                </form>
+                <div class="have-account">
+                    <span>Dont have an account yet? Sign Up</span>
+                    <button>Sign Up</button>
+                </div>
+                <div class="forgot">
+                    <a href="">Forgot your password?</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="header" id="swap-anchor">
+        <div class="container-fluid">
+            <div class="header-navigation">
+                <div class="header-logo">
+                    <div class="header-logo-img">
+                        <img src="../assets/icons/header-logo.svg" alt="">
+                    </div>
+                    <div class="header-logo-name">
+                        <span>wewant</span>you
+                    </div>
+                </div>
+                <div class="header-pages">
+                    <div class="pages">
+                        <a href="">Features</a>
+                        <a href="">Pricing</a>
+                        <a href="">Blog</a>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+                <div class="header-autorization">
+                    <div class="autorization">
+                        <a href="#" id="desctopLogin">Log In</a>
+                        <button id="desctopSignUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-header">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <div class="header-logo-img">
+                            <img src="../assets/icons/header-logo.svg" alt="">
+                        </div>
+                        <div class="header-logo-name">
+                            <span>wewant</span>you
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="">Features</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" id="mobileLogin">Log In</a>
+                        </li>
+                        <li>
+                            <button id="mobileSignUp">Sign Up</button>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="hero">
+            <div class="container-fluid">
+                <div class="easist-way">
+                    <div class="easiest-way-title">
+                        <h1>
+                            The easiest way<br>
+                            to send <span>offer letters</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="get-started">
+                    <div class="get-started-for-free">
+                        <span>Get Started for free</span>
+                    </div>
+                    <div class="get-started-button">
+                        <button>Start Today</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="container-fluide">
+                <div class="did-you-know">
+                    <h3>
+                        Did You Know
+                    </h3>
+                </div>
+                <div class="percent-blocks">
+                    <div class="percent-block">
+                        <div class="percent-number">
+                            <span>
+                                84
+                            </span>
+                        </div>
+                        <div class="percent-text">
+                            <div class="percent-symbol">
+                                <span>
+                                    %
+                                </span>
+                            </div>
+                            <div class="percent-description">
+                                <span>
+                                    of job seekers say reputation of a company as an employer is very imporant.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="percent-block">
+                        <div class="percent-number">
+                            <span>
+                                65
+                            </span>
+                        </div>
+                        <div class="percent-text">
+                            <div class="percent-symbol">
+                                <span>
+                                    %
+                                </span>
+                            </div>
+                            <div class="percent-description">
+                                <span>
+                                    of joboffers never get recived due to the hiring manager not being able to contact the candidate.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="percent-block">
+                        <div class="percent-number">
+                            <span>
+                                42
+                            </span>
+                        </div>
+                        <div class="percent-text">
+                            <div class="percent-symbol">
+                                <span>
+                                    %
+                                </span>
+                            </div>
+                            <div class="percent-description">
+                                <span>
+                                    of employers are worried they won't be able to find the talant they need.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-button">
+                    <button type="">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <div class="features">
+            <div class="container-fluid">
+                <div class="features-container">
+                    <div class="row">
+                        <div class="col-sm-offset-1 col-md-offset-1 col-xs-12 col-sm-10 col-md-10">
+                            <div class="core-features">
+                                <span>
+                                    core features
+                                </span>
+                            </div>
+                            <div class="features-title">
+                                <h2>
+                                    Design and send<br> offer letters easily.
+                                </h2>
+                            </div>
+                            <div class="features-description">
+                                <span>
+                                    Dynamically transition enterprise mindshare through high<br>
+                                    standards in metrics. Dramatically underwhelm
+                                    business action<br>
+                                    items rather than parallel information. Comtently stragize<br> 
+                                    diverse leadership without cross functional networks.
+                                </span>
+                            </div>
+                            <div class="features-cards">
+                                <div class="features-card">
+                                    <div class="features-card-icon">
+                                        <img src="../assets/icons/features-card-1.svg" alt="">
+                                    </div>
+                                    <div class="features-card-description">
+                                        <span>
+                                            API Connection for popular HR software
+                                        </span>
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="features-card">
+                                    <div class="features-card-icon">
+                                        <img src="../assets/icons/features-card-2.png" alt="">
+                                    </div>
+                                    <div class="features-card-description">
+                                        <span>
+                                            Tracking and enhanced security
+                                        </span>
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="features-card">
+                                    <div class="features-card-icon">
+                                        <img src="../assets/icons/features-card-3.png" alt="">
+                                    </div>
+                                    <div class="features-card-description">
+                                        <span>
+                                            Detailed weekly report
+                                        </span>
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="features-card">
+                                    <div class="features-card-icon">
+                                        <img src="../assets/icons/features-card-4.png" alt="">
+                                    </div>
+                                    <div class="features-card-description">
+                                        <span>
+                                            Access to premium templates
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="see-all-features">
+                                <a href="#">See All Features</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog">
+            <div class="container-fluid">
+                <div class="blog-container">
+                    <div class="blog-articles">
+                        <span>blog articles</span>
+                    </div>
+                    <div class="blog-title">
+                        <h2>
+                            The best articles about offer letters and human resources.
+                        </h2>
+                    </div>
+                    <div class="blog-posts">
+                        <div class="post">
+                            <div class="post-title-img">
+                                <img src="../assets/images/blog-img.png" alt="">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-label">
+                                    <span>BLOG</span>
+                                </div>
+                                <div class="post-date">
+                                    <span>19.07.2018</span>
+                                </div>
+                                <div class="post-title">
+                                    <h4>
+                                        How to connect your offer letter to HR software in 2 steps
+                                    </h4>
+                                </div>
+                                <div class="post-description">
+                                    Dynamically transition enterprise mindshare through high standardsin metrics. Dramatically underwhelm business action items
+                                    rather than parallel information.
+                                </div>
+                                <div class="post-article">
+                                    <a>Read Article</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="post-title-img">
+                                <img src="../assets/images/blog-img.png" alt="">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-label">
+                                    <span>BLOG</span>
+                                </div>
+                                <div class="post-date">
+                                    <span>19.07.2018</span>
+                                </div>
+                                <div class="post-title">
+                                    <h4>
+                                        How to connect your offer letter to HR software in 2 steps
+                                    </h4>
+                                </div>
+                                <div class="post-description">
+                                    Dynamically transition enterprise mindshare through high standardsin metrics. Dramatically underwhelm business action items
+                                    rather than parallel information.
+                                </div>
+                                <div class="post-article">
+                                    <a>Read Article</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="post-title-img">
+                                <img src="../assets/images/blog-img.png" alt="">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-label">
+                                    <span>BLOG</span>
+                                </div>
+                                <div class="post-date">
+                                    <span>19.07.2018</span>
+                                </div>
+                                <div class="post-title">
+                                    <h4>
+                                        How to connect your offer letter to HR software in 2 steps
+                                    </h4>
+                                </div>
+                                <div class="post-description">
+                                    Dynamically transition enterprise mindshare through high standardsin metrics. Dramatically underwhelm business action items
+                                    rather than parallel information.
+                                </div>
+                                <div class="post-article">
+                                    <a>Read Article</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="read-all-posts">
+                        <a>Read All Articles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cta">
+            <div class="container-fluid">
+                <div class="cta-container">
+                    <div class="row">
+                        <div class="col-sm-offset-1 col-md-offset-1 col-xs-12 col-sm-10 col-md-10">
+                            <div class="cta-card">
+                                <div class="cta-title">
+                                    <h3>
+                                        Get started today for free.
+                                    </h3>
+                                </div>
+                                <div class="cta-description">
+                                    <span>
+                                        Start creating the best offer letters and discover the best talent out there.
+                                    </span>
+                                </div>
+                                <div class="cta-form">
+                                    <form class="cta-form-flex" role="form">
+                                        <div class="form-group">
+                                            <label class="" for="exampleInputName">Enter your name</label>
+                                            <input type="text" class="form-control" id="exampleInputName" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="" for="exampleInputEmail">Enter your email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail" placeholder="">
+                                        </div>
+                                        <button type="submit" class="btn btn-default">I'm ready to create</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../assets/icons/footer-logo.svg" alt="">
+            </div>
+            <div class="footer-pages">
+                <div class="product-pages">
+                    <ul>Product
+                        <li>
+                            <a href="">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="">Features</a>
+                        </li>
+                        <li>
+                            <a href="">Templates</a>
+                        </li>
+                        <li>
+                            <a href="">Integrations</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="company-pages">
+                    <ul>Company
+                        <li>
+                            <a href="">About</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="resources-pages">
+                    <ul>Resources
+                        <li>
+                            <a href="">Blog</a>
+                        </li>
+                        <li>
+                            <a href="">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/Twitter.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/Instagram.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../assets/icons/YouTube.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="swap-up">
+                    <a href="#swap-anchor">
+                        <img src="../assets/icons/arrow.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="copyright-company">
+                <span>Copyright &copy; 2018 - WeWantYou, LLC. All rights reserved.</span>
+            </div>
+            <div class="copyright-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var LoginModal = document.getElementById("LoginModal");
+        var SignUpModal = document.getElementById("SignUpModal");
+
+        var desctopLogin = document.getElementById("desctopLogin");
+        var desctopSignUp = document.getElementById("desctopSignUp");
+
+        var mobileLogin = document.getElementById("mobileLogin");
+        var mobileSignUp = document.getElementById("mobileSignUp");
+
+        var loginClose = document.getElementById("loginClose");
+        var signupClose = document.getElementById("signupClose");
+
+        var PayPal = document.getElementById("paypalModal");
+        var OpenPaypal = document.getElementById("OpenPaypal");
+        var paypalClose = document.getElementById("paypalClose");
+
+        var Stripe = document.getElementById("stripeModal");
+        var OpenStripe = document.getElementById("OpenStripe");
+        var stripeClose = document.getElementById("stripeClose");
+
+        OpenStripe.onclick = function(){
+            Stripe.style.display = "flex";
+            document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+        }
+
+        stripeClose.onclick = function(){
+            Stripe.style.display = "none"
+            document.getElementsByTagName("body")[0].style.overflowY = "scroll";
+        }
+
+        OpenPaypal.onclick = function(){
+            PayPal.style.display = "flex";
+            document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+        }
+
+        paypalClose.onclick = function(){
+            PayPal.style.display = "none"
+            document.getElementsByTagName("body")[0].style.overflowY = "scroll";
+        }
+
+        desctopLogin.onclick = function(){
+            LoginModal.style.display = "block";
+            document.getElementsByClassName("header")[0].style.display = "none";
+            document.getElementsByClassName("main")[0].style.display = "none";
+            document.getElementsByClassName("footer")[0].style.display = "none";
+        }
+
+        mobileLogin.onclick = function(){
+            LoginModal.style.display = "block";
+            document.getElementsByClassName("header")[0].style.display = "none";
+            document.getElementsByClassName("main")[0].style.display = "none";
+            document.getElementsByClassName("footer")[0].style.display = "none";
+        }
+
+        desctopSignUp.onclick = function(){
+            SignUpModal.style.display = "block";
+            document.getElementsByClassName("header")[0].style.display = "none";
+            document.getElementsByClassName("main")[0].style.display = "none";
+            document.getElementsByClassName("footer")[0].style.display = "none";
+        }
+
+        mobileSignUp.onclick = function(){
+            SignUpModal.style.display = "block";
+            document.getElementsByClassName("header")[0].style.display = "none";
+            document.getElementsByClassName("main")[0].style.display = "none";
+            document.getElementsByClassName("footer")[0].style.display = "none";
+        }
+    
+        loginClose.onclick = function (){
+            LoginModal.style.display = "none";
+            document.getElementsByClassName("header")[0].style.display = "block";
+            document.getElementsByClassName("main")[0].style.display = "block";
+            document.getElementsByClassName("footer")[0].style.display = "block";
+        }
+
+        signupClose.onclick = function (){
+            SignUpModal.style.display = "none";
+            document.getElementsByClassName("header")[0].style.display = "block";
+            document.getElementsByClassName("main")[0].style.display = "block";
+            document.getElementsByClassName("footer")[0].style.display = "block";
+        }
+
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

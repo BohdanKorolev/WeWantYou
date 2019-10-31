@@ -1,0 +1,1280 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round");
+.sign-up-modal-container {
+  z-index: 1;
+  display: none;
+  min-height: 100vh;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(45deg, #e5ebef 0%, #ffffff 100%);
+  padding-bottom: 20rem;
+}
+
+.sign-up-modal-container .wwy-logo {
+  padding-top: 10rem;
+}
+
+.sign-up-modal-container .wwy-logo .sign-up-close {
+  text-align: right;
+}
+
+.sign-up-modal-container .wwy-logo .wwy-img {
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.sign-up-modal-container .paypal-payment-modal {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  z-index: 1000;
+  background-color: #0000009c;
+  overflow: auto;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container {
+  height: max-content;
+  margin: 10rem auto;
+  width: 521px;
+  padding: 3rem 0rem 0rem;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-close {
+  padding: 0 3rem;
+  text-align: right;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-logo {
+  text-align: center;
+  margin-top: 4.5rem;
+  margin-bottom: 4rem;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-plan {
+  background-color: #e8edf0;
+  height: 157px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-plan .plan-wrapper .plan-type {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-plan .plan-wrapper .plan-type span {
+  font-size: 36px;
+  line-height: 1;
+  color: #005bcf;
+  font-family: "Varela Round";
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-plan .plan-wrapper .annually-cost {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-plan .plan-wrapper .annually-cost .cost-symbol {
+  color: #95979c;
+  font-size: 18px;
+  line-height: 0.8;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-plan .plan-wrapper .annually-cost .cost-value {
+  font-size: 48px;
+  line-height: 0.8;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: 800;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-plan .plan-wrapper .annually-cost .mo {
+  font-size: 24px;
+  line-height: 0.8;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: 800;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-plan .plan-wrapper .annually-cost .cost-name {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-plan .plan-wrapper .annually-cost .cost-name:after {
+  content: "Includes 1 Month Free";
+  display: block;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #3abba3;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form {
+  text-align: center;
+  padding: 5rem;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form {
+  padding-bottom: 3rem;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form input {
+  width: 100%;
+  height: 60px;
+  border-radius: 3px;
+  background-color: #f9ffbd;
+  border: 1px solid rgba(43, 47, 58, 0.5);
+  margin-bottom: 1rem;
+  font-size: 16px;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  padding-left: 2rem;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form button {
+  width: 100%;
+  height: 60px;
+  border-radius: 3px;
+  background-color: #006fb9;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form a {
+  display: block;
+  font-size: 16px;
+  line-height: 1;
+  color: #0070ba;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form .or {
+  margin: 25px 0px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  color: #8d8d8d;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form button {
+  width: 100%;
+  height: 60px;
+  border-radius: 3px;
+  border: 1px solid #e1e7eb;
+  background-color: #e1e7eb;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1;
+  color: #141414;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.sign-up-modal-container .stripe-payment-modal {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  z-index: 1000;
+  background-color: #0000009c;
+  overflow: auto;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container {
+  height: max-content;
+  margin: 10rem auto;
+  padding: 3rem 0rem 0rem;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-close {
+  padding: 0 3rem;
+  text-align: right;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-logo {
+  text-align: center;
+  margin-top: 4.5rem;
+  margin-bottom: 4rem;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-plan {
+  background-color: #e8edf0;
+  height: 157px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-plan .plan-wrapper .plan-type {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-plan .plan-wrapper .plan-type span {
+  font-size: 36px;
+  line-height: 1;
+  color: #005bcf;
+  font-family: "Varela Round";
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-plan .plan-wrapper .annually-cost {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-plan .plan-wrapper .annually-cost .cost-symbol {
+  color: #95979c;
+  font-size: 18px;
+  line-height: 0.8;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-plan .plan-wrapper .annually-cost .cost-value {
+  font-size: 48px;
+  line-height: 0.8;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: 800;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-plan .plan-wrapper .annually-cost .mo {
+  font-size: 24px;
+  line-height: 0.8;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: 800;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-plan .plan-wrapper .annually-cost .cost-name {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-plan .plan-wrapper .annually-cost .cost-name:after {
+  content: "Includes 1 Month Free";
+  display: block;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #3abba3;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-form {
+  padding: 5rem;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-form .form-group label {
+  font-size: 13px;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-form .form-group input {
+  font-size: 16px;
+  color: #2b2f3a;
+  height: 60px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 1px solid rgba(43, 47, 58, 0.15);
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-form .card-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-form .card-info .form-group {
+  width: 48%;
+}
+
+.sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-form button {
+  width: 100%;
+  height: 60px;
+  border-radius: 3px;
+  border: 1px solid #6771e5;
+  background-color: #6771e5;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: bold;
+  text-align: center;
+}
+
+.sign-up-modal-container .login .login-container {
+  margin: 0 auto;
+  width: 420px;
+}
+
+.sign-up-modal-container .login .login-container .login-title {
+  padding: 10rem 0 6rem;
+}
+
+.sign-up-modal-container .login .login-container .login-title h1 {
+  font-size: 53px;
+  margin: 0;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Varela Round";
+  text-align: center;
+}
+
+.sign-up-modal-container .login .login-container form .form-group {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-modal-container .login .login-container form .form-group label {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  margin-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.sign-up-modal-container .login .login-container form .form-group input {
+  height: 6rem;
+  border-radius: 3px;
+  background-color: #f3f5f7;
+  border: 1px solid rgba(43, 47, 58, 0.15);
+  font-size: 16px;
+  line-height: 30px;
+  color: #adb0b5;
+  font-family: "Open Sans";
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.sign-up-modal-container .login .login-container form .form-group input:focus {
+  color: #2b2f3a;
+  background-color: #ffffff;
+  border: 2px solid #005bcf;
+}
+
+.sign-up-modal-container .login .login-container form button {
+  width: 100%;
+  height: 6rem;
+  border-radius: 3px;
+  background-color: #39bba3;
+  border: 1px solid #39bba3;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.sign-up-modal-container .login .login-container .have-account {
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.sign-up-modal-container .login .login-container .have-account span {
+  font-size: 24px;
+  line-height: 1;
+  color: #8d9197;
+  font-family: "Varela Round";
+  text-align: center;
+}
+
+.sign-up-modal-container .login .login-container .have-account button {
+  margin-top: 2rem;
+  width: 210px;
+  height: 60px;
+  border-radius: 3px;
+  border: 1px solid #2b2f39;
+  background-color: #2b2f39;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.sign-up-modal-container .login .login-container .forgot {
+  text-align: center;
+}
+
+.sign-up-modal-container .login .login-container .forgot a {
+  font-size: 14px;
+  line-height: 1;
+  color: #8d9197;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .sign-up-steper .steper-container {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-modal-container .sign-up-steper .steper-container ul {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  padding: 0;
+  margin: 10rem;
+}
+
+.sign-up-modal-container .sign-up-steper .steper-container ul li {
+  list-style: none;
+  font-size: 16px;
+  line-height: 1;
+  font-family: "Varela Round";
+  color: #2b2f3a;
+  text-align: center;
+}
+
+.sign-up-modal-container .sign-up-steper .steper-container ul .active-step {
+  color: #005bcf;
+}
+
+.sign-up-modal-container .sign-up-steper .steper-container ul .done-step {
+  color: #3abba3;
+  position: relative;
+}
+
+.sign-up-modal-container .sign-up-steper .steper-container ul .done-step:before {
+  display: block;
+  position: absolute;
+  content: url(../assets/icons/check-green.svg);
+  top: -2rem;
+  left: 40%;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-title {
+  margin-bottom: 3rem;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-title h1 {
+  font-size: 53px;
+  margin: 0;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Varela Round";
+  text-align: center;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form label {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  margin-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form input {
+  height: 6rem;
+  border-radius: 3px;
+  background-color: #f3f5f7;
+  border: 1px solid rgba(43, 47, 58, 0.15);
+  font-size: 16px;
+  line-height: 30px;
+  color: #adb0b5;
+  font-family: "Open Sans";
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form input:focus {
+  color: #2b2f3a;
+  background-color: #ffffff;
+  border: 2px solid #005bcf;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form input:focus + label {
+  color: #005bcf;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .first-flex-wrap, .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .second-flex-wrap, .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .last-flex-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .first-flex-wrap > div, .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .second-flex-wrap > div, .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .last-flex-wrap > div {
+  width: 48%;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .form-group {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .form-checkbox .form-group {
+  display: table;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .form-checkbox .form-group label {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .form-checkbox .form-group label a {
+  color: #39bba3;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .form-checkbox .form-group label:before {
+  content: "";
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 1px solid rgba(43, 47, 58, 0.15);
+  vertical-align: middle;
+  margin-right: 1rem;
+  transition: 0.2s;
+  background-position: center;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .form-checkbox .form-group input[type="checkbox"] {
+  display: none;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .form-checkbox .form-group input[type="checkbox"]:checked + label::before {
+  background-image: url("../assets/icons/check.svg");
+  background-repeat: no-repeat;
+}
+
+.sign-up-modal-container .sign-up .sign-up-container .sign-up-form .sign-up-button button {
+  height: 5rem;
+  border: 1px solid #39bba3;
+  border-radius: 3px;
+  background-color: #39bba3;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 50px;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: bold;
+  width: 100%;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-title h1 {
+  font-size: 53px;
+  margin: 0;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Varela Round";
+  text-align: center;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-interval {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 0 5rem;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-interval .choose-interval-wrapper {
+  display: block;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-interval .choose-interval-wrapper label {
+  display: block;
+  font-size: 13px;
+  line-height: 30px;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: 400;
+  margin: 0;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-interval .choose-interval-wrapper select {
+  padding: 2rem;
+  width: 420px;
+  border-radius: 3px;
+  background-color: transparent;
+  border: 1px solid rgba(43, 47, 58, 0.15);
+  font-size: 16px;
+  line-height: 30px;
+  color: #a4a5a9;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-interval .choose-interval-wrapper select:active {
+  color: #2b2f3a;
+  background-color: #ffffff;
+  border: 1px solid rgba(43, 47, 58, 0.15);
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+  padding: 4rem 0rem;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card:nth-child(1) {
+  border-left: 5px solid #2b2f39;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card:nth-child(2) {
+  border-left: 5px solid #39bba3;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card:nth-child(2) .card-title h3 {
+  color: #39bba3;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card:nth-child(2) .card-features ul {
+  color: #39bba3;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card:nth-child(2) .card-features ul li {
+  color: #2b2f3a;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card:nth-child(3) {
+  border-left: 5px solid #005bcf;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card:nth-child(3) .card-title h3 {
+  color: #005bcf;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card:nth-child(3) .card-features ul {
+  color: #005bcf;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card:nth-child(3) .card-features ul li {
+  color: #2b2f3a;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-title h3 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Varela Round";
+  text-align: center;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .or {
+  padding: 2rem 0;
+  font-size: 14px;
+  line-height: 1;
+  color: #95979c;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .manthly-cost {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .manthly-cost .cost-symbol {
+  color: #95979c;
+  font-size: 18px;
+  line-height: 0.8;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .manthly-cost .cost-value {
+  font-size: 30px;
+  line-height: 0.8;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: 800;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .manthly-cost .cost-name {
+  font-size: 14px;
+  line-height: 0.8;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .annually-cost {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .annually-cost .cost-symbol {
+  color: #95979c;
+  font-size: 18px;
+  line-height: 0.8;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .annually-cost .cost-value {
+  font-size: 48px;
+  line-height: 0.8;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: 800;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .annually-cost .mo {
+  font-size: 24px;
+  line-height: 0.8;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: 800;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .annually-cost .cost-name {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .card-cost .annually-cost .cost-name:after {
+  content: "Includes 1 Month Free";
+  display: block;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #3abba3;
+  font-family: "Open Sans";
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .choose-card {
+  margin-top: auto;
+  padding: 4rem 3rem 0rem;
+  border-top: 1px dashed #cbcbcb;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .choose-card button {
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 50px;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 52px;
+  border-radius: 3px;
+  background-color: #2b2f39;
+  border: 1px solid #2b2f39;
+  transition: background-color 0.2s, border 0.2s;
+}
+
+.sign-up-modal-container .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card .choose-card button:hover {
+  border: #3abba3;
+  background-color: #3abba3;
+}
+
+.sign-up-modal-container .payment .payment-container .payment-title h1 {
+  font-size: 53px;
+  margin: 0;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Varela Round";
+  text-align: center;
+}
+
+.sign-up-modal-container .payment .payment-container .payment-method {
+  margin: 0 auto;
+  width: 63%;
+}
+
+.sign-up-modal-container .payment .payment-container .payment-method .method-title {
+  padding: 6rem 0 2rem;
+}
+
+.sign-up-modal-container .payment .payment-container .payment-method .method-title span {
+  font-size: 24px;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Varela Round";
+}
+
+.sign-up-modal-container .payment .payment-container .payment-method .methods {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-up-modal-container .payment .payment-container .payment-method .methods .paypal-method, .sign-up-modal-container .payment .payment-container .payment-method .methods .stripe-method {
+  width: 48%;
+}
+
+.sign-up-modal-container .payment .payment-container .payment-method .methods .paypal-method span, .sign-up-modal-container .payment .payment-container .payment-method .methods .stripe-method span {
+  font-size: 13px;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: 600;
+}
+
+.sign-up-modal-container .payment .payment-container .payment-method .methods .paypal-method .paypal, .sign-up-modal-container .payment .payment-container .payment-method .methods .paypal-method .stripe, .sign-up-modal-container .payment .payment-container .payment-method .methods .stripe-method .paypal, .sign-up-modal-container .payment .payment-container .payment-method .methods .stripe-method .stripe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border-radius: 3px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sign-up-modal-container .payment .payment-container .payment-method .methods .paypal-method .paypal:hover, .sign-up-modal-container .payment .payment-container .payment-method .methods .paypal-method .stripe:hover, .sign-up-modal-container .payment .payment-container .payment-method .methods .stripe-method .paypal:hover, .sign-up-modal-container .payment .payment-container .payment-method .methods .stripe-method .stripe:hover {
+  background-color: #fff;
+}
+
+.sign-up-modal-container .company-info .company-info-container {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-title {
+  margin-bottom: 3rem;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-title h1 {
+  font-size: 53px;
+  margin: 0;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Varela Round";
+  text-align: center;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form label {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  margin-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form input, .sign-up-modal-container .company-info .company-info-container .info-form select {
+  height: 6rem;
+  border-radius: 3px;
+  background-color: #f3f5f7;
+  border: 1px solid rgba(43, 47, 58, 0.15);
+  font-size: 16px;
+  line-height: 30px;
+  color: #adb0b5;
+  font-family: "Open Sans";
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form input:focus, .sign-up-modal-container .company-info .company-info-container .info-form select:focus {
+  color: #2b2f3a;
+  background-color: #ffffff;
+  border: 2px solid #005bcf;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form input:focus + label, .sign-up-modal-container .company-info .company-info-container .info-form select:focus + label {
+  color: #005bcf;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .first-flex-wrap, .sign-up-modal-container .company-info .company-info-container .info-form .second-flex-wrap, .sign-up-modal-container .company-info .company-info-container .info-form .last-flex-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .first-flex-wrap > div, .sign-up-modal-container .company-info .company-info-container .info-form .second-flex-wrap > div, .sign-up-modal-container .company-info .company-info-container .info-form .last-flex-wrap > div {
+  width: 48%;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .form-group {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .checkbox-form-title span {
+  font-size: 24px;
+  color: #2b2f3a;
+  font-family: "Varela Round";
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox {
+  padding: 2rem 0 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager {
+  width: 48%;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .hr-answer, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .signature-answer, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .hr-answer, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .signature-answer {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .hr-answer span, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .signature-answer span, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .hr-answer span, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .signature-answer span {
+  font-size: 13px;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .hr-answer label, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .signature-answer label, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .hr-answer label, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .signature-answer label {
+  font-size: 13px;
+  line-height: 1;
+  color: #2b2f3a;
+  font-family: "Open Sans";
+  margin: 0;
+  font-weight: 600;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .hr-answer label:before, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .signature-answer label:before, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .hr-answer label:before, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .signature-answer label:before {
+  content: "";
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 1px solid rgba(43, 47, 58, 0.15);
+  vertical-align: middle;
+  margin-right: 1rem;
+  transition: 0.2s;
+  background-position: center;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .hr-answer input[type="radio"], .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .signature-answer input[type="radio"], .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .hr-answer input[type="radio"], .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .signature-answer input[type="radio"] {
+  display: none;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .hr-answer input[type="radio"]:checked + label::before, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .hr-manager .signature-answer input[type="radio"]:checked + label::before, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .hr-answer input[type="radio"]:checked + label::before, .sign-up-modal-container .company-info .company-info-container .info-form .form-checkbox .signature-manager .signature-answer input[type="radio"]:checked + label::before {
+  background-image: url("../assets/icons/check.svg");
+  background-repeat: no-repeat;
+}
+
+.sign-up-modal-container .company-info .company-info-container .info-form .sign-up-button button {
+  height: 5rem;
+  border: 1px solid #39bba3;
+  border-radius: 3px;
+  background-color: #39bba3;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 50px;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: bold;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  #SignUpModal .wwy-logo {
+    padding-top: 5rem;
+  }
+  #SignUpModal .sign-up-steper .steper-container ul {
+    margin: 6rem;
+  }
+  #SignUpModal .payment .payment-container .payment-method {
+    width: 70%;
+  }
+  #SignUpModal .payment .payment-container .payment-method .methods .paypal-method, #SignUpModal .payment .payment-container .payment-method .methods .stripe-method {
+    width: 48%;
+  }
+  #SignUpModal .payment .payment-container .payment-method .methods .paypal-method .paypal, #SignUpModal .payment .payment-container .payment-method .methods .paypal-method .stripe, #SignUpModal .payment .payment-container .payment-method .methods .stripe-method .paypal, #SignUpModal .payment .payment-container .payment-method .methods .stripe-method .stripe {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sign-up-modal-container .stripe-payment-modal .stripe-modal-container {
+    margin: 7rem auto;
+  }
+  #SignUpModal .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper {
+    display: block;
+  }
+  #SignUpModal .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card {
+    margin: 0 auto 2rem;
+    width: 50%;
+  }
+  #SignUpModal .company-info .company-info-container {
+    width: 100%;
+  }
+  #SignUpModal .company-info .company-info-container .info-form .form-checkbox .hr-manager .hr-answer, #SignUpModal .company-info .company-info-container .info-form .form-checkbox .hr-manager .signature-answer, #SignUpModal .company-info .company-info-container .info-form .form-checkbox .signature-manager .hr-answer, #SignUpModal .company-info .company-info-container .info-form .form-checkbox .signature-manager .signature-answer {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .form-checkbox .form-group label:before {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+  .sign-up-modal-container {
+    padding-bottom: 0rem;
+    position: relative;
+    overflow-y: hidden;
+  }
+  .sign-up-modal-container .sign-up .sign-up-container {
+    width: 100%;
+  }
+  .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .first-flex-wrap, .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .second-flex-wrap, .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .last-flex-wrap {
+    flex-direction: column;
+  }
+  .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .first-flex-wrap > div, .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .second-flex-wrap > div, .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .last-flex-wrap > div {
+    width: 100%;
+  }
+  .sign-up-modal-container .sign-up .sign-up-container .sign-up-form .form-checkbox .form-group input {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .sign-up-modal-container .stripe-payment-modal .stripe-modal-container {
+    padding-top: 1.5rem;
+    margin: 0;
+    width: 100%;
+  }
+  .sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-logo {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .sign-up-modal-container .stripe-payment-modal .stripe-modal-container .payment-form {
+    padding: 1.5rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container {
+    margin: 0;
+    width: 100%;
+    padding: 1rem 0rem 0rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-close {
+    padding: 0rem 1.5rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form {
+    padding: 4rem 1.5rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form input {
+    margin-bottom: 2rem;
+  }
+  #LoginModal .wwy-logo {
+    padding-top: 1rem;
+  }
+  #LoginModal .wwy-logo .wwy-img {
+    margin-top: 4rem;
+  }
+  #LoginModal .login .login-container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  #LoginModal .login .login-container .login-title {
+    padding: 2rem 0 4rem;
+  }
+  #LoginModal .login .login-container .have-account {
+    padding: 3rem 0;
+  }
+  #LoginModal .login .login-container .have-account span {
+    font-size: 20px;
+  }
+  #SignUpModal .sign-up-steper .steper-container ul {
+    margin: 5rem 1.5rem;
+  }
+  #SignUpModal .sign-up-steper .steper-container ul li {
+    font-size: 15px;
+  }
+  #SignUpModal .choose-plan .choose-plan-container .choose-interval .choose-interval-wrapper {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  #SignUpModal .choose-plan .choose-plan-container .choose-interval .choose-interval-wrapper select {
+    width: 100%;
+  }
+  #SignUpModal .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  #SignUpModal .choose-plan .choose-plan-container .choose-plan-cards .plan-cards-wrapper .plan-card {
+    width: 100%;
+  }
+  #SignUpModal .payment .payment-container {
+    padding: 0px 15px;
+  }
+  #SignUpModal .payment .payment-container .payment-method {
+    width: 100%;
+  }
+  #SignUpModal .company-info .company-info-container .info-form .first-flex-wrap, #SignUpModal .company-info .company-info-container .info-form .second-flex-wrap, #SignUpModal .company-info .company-info-container .info-form .last-flex-wrap {
+    flex-direction: column;
+  }
+  #SignUpModal .company-info .company-info-container .info-form .first-flex-wrap > div, #SignUpModal .company-info .company-info-container .info-form .second-flex-wrap > div, #SignUpModal .company-info .company-info-container .info-form .last-flex-wrap > div {
+    width: 100%;
+  }
+  #SignUpModal .company-info .company-info-container .info-form .form-checkbox {
+    flex-direction: column;
+    height: 21rem;
+  }
+  #SignUpModal .company-info .company-info-container .info-form .form-checkbox .hr-manager, #SignUpModal .company-info .company-info-container .info-form .form-checkbox .signature-manager {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container {
+    padding: 3rem 0rem 3rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form {
+    padding: 2rem 1.5rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form {
+    padding-bottom: 2rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form input {
+    height: 5rem;
+    margin-bottom: 2rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form button {
+    height: 5rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form .or {
+    margin: 2rem 0rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form button {
+    height: 5rem;
+  }
+  #LoginModal .wwy-logo {
+    padding-top: 1rem;
+  }
+  #LoginModal .wwy-logo .wwy-img {
+    margin-top: 1rem;
+  }
+  #LoginModal .login .login-container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  #LoginModal .login .login-container .login-title {
+    padding: 1rem 0 3rem;
+  }
+  #LoginModal .login .login-container form .form-group input {
+    height: 5rem;
+  }
+  #LoginModal .login .login-container .have-account {
+    padding: 3rem 0;
+  }
+  #LoginModal .login .login-container .have-account span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container {
+    padding: 1.5rem 0rem 1.5rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form {
+    padding: 1rem 1.5rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form {
+    padding-bottom: 1rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form input {
+    height: 5rem;
+    margin-bottom: 1rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form form button {
+    height: 5rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form .or {
+    margin: 1rem 0rem;
+  }
+  .sign-up-modal-container .paypal-payment-modal .paypal-modal-container .payment-form button {
+    height: 5rem;
+  }
+  #LoginModal {
+    padding-bottom: 5rem;
+  }
+  #LoginModal .login .login-container form .form-group {
+    padding-bottom: 2rem;
+  }
+  #LoginModal .login .login-container form button {
+    height: 5rem;
+  }
+  #LoginModal .login .login-container .have-account {
+    padding: 2rem;
+  }
+  #LoginModal .login .login-container .have-account span {
+    display: block;
+  }
+  #LoginModal .login .login-container .have-account button {
+    height: 5rem;
+  }
+  #SignUpModal .sign-up .sign-up-container .sign-up-form input {
+    height: 5rem;
+  }
+  #SignUpModal .choose-plan .choose-plan-container .choose-plan-title {
+    padding: 0px 15px;
+  }
+  #SignUpModal .choose-plan .choose-plan-container .choose-plan-title h1 {
+    font-size: 49px;
+  }
+  #SignUpModal .choose-plan .choose-plan-container .choose-interval .choose-interval-wrapper select {
+    height: 5rem;
+    padding: 0 0 0 1rem;
+  }
+  #SignUpModal .payment .payment-container .payment-method .methods .paypal-method .paypal, #SignUpModal .payment .payment-container .payment-method .methods .paypal-method .stripe, #SignUpModal .payment .payment-container .payment-method .methods .stripe-method .paypal, #SignUpModal .payment .payment-container .payment-method .methods .stripe-method .stripe {
+    height: 5rem;
+  }
+}
